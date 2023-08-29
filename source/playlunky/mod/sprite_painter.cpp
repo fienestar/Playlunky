@@ -154,6 +154,7 @@ void SpritePainter::RegisterSheet(std::filesystem::path full_path, std::filesyst
         if (algo::contains(s_KnownTextureFiles, std::filesystem::path{ real_path }.replace_extension("").filename().string()))
         {
             const auto target_sheet_dds = std::filesystem::path{ real_path }.replace_extension(".DDS");
+            LogInfo("called from sprite_painter.cpp");
             ExtractGameAssets(std::array{ target_sheet_dds }, m_OriginalDataFolder);
         }
 

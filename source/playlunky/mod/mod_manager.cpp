@@ -231,6 +231,7 @@ ModManager::ModManager(std::string_view mods_root, PlaylunkySettings& settings, 
                 fs::path{ "strings12.str" },
                 fs::path{ "Data/Levels/Arena/dmpreview.tok" },
             };
+            LogInfo("called from mod_manager.cpp");
             if (ExtractGameAssets(files, db_original_folder))
             {
                 LogInfo("Successfully extracted all required game assets...");

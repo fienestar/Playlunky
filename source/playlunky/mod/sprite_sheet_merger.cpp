@@ -149,6 +149,7 @@ void SpriteSheetMerger::RegisterCustomImages(std::string_view mod_name, std::spa
             else
             {
                 const auto target_sheet_dds = fs::path{ target_sheet }.replace_extension(".DDS");
+                LogInfo("called from sprite_sheet_merger.cpp");
                 if (ExtractGameAssets(std::array{ target_sheet_dds }, original_data_folder))
                 {
                     const auto target_file_path = original_data_folder / fs::path{ target_sheet_no_ext }.replace_extension(".png");
